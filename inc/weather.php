@@ -32,54 +32,61 @@ while ($donnees = $reponse->fetch())
 
 
 
-    if( $donnees['idMeteo'] == 800)
+    if( $donnees['weather'] == 800)
     {
     ?>
-        <i class="wi wi-day-sunny">Ensoleillé</i>
+        <i class="wi wi-day-sunny"></i>Ensoleillé
     <?php
     }
-    elseif($donnees['idMeteo'] >= 200 && $donnees['idMeteo'] <= 232)
+    elseif($donnees['weather'] >= 200 && $donnees['weather'] <= 232)
     {
         ?>
         <i class="wi wi-day-thunderstorm">Tempête</i>
         <?php
     }
-    elseif($donnees['idMeteo'] >= 300 && $donnees['idMeteo'] <= 321)
+    elseif($donnees['weather'] >= 300 && $donnees['weather'] <= 321)
     {
         ?>
         <i class="wo wi-day-rain-mix">Bruine</i>
         <?php
     }
-        elseif($donnees['idMeteo'] >= 500 && $donnees['idMeteo'] <= 504)
+    elseif($donnees['weather'] >= 500 && $donnees['weather'] <= 504)
     {
         ?>
         <i class="wi wi-day-rain">Bruine</i>
         <?php
-    }    elseif($donnees['idMeteo'] == 511)
+    }
+    elseif($donnees['weather'] == 511)
     {
         ?>
         <i class="wi wi-snow">Pluie verglassante</i>
         <?php
     }
-        elseif($donnees['idMeteo'] >= 520 && $donnees['idMeteo'] <= 531)
+    elseif($donnees['weather'] >= 520 && $donnees['weather'] <= 531)
     {
         ?>
         <i class="wi wi-rain">Pluie</i>
         <?php
     }
-        elseif($donnees['idMeteo'] >= 600 && $donnees['idMeteo'] <= 622)
+    elseif($donnees['weather'] >= 600 && $donnees['weather'] <= 622)
     {
         ?>
         <i class="wi wi-snow">Neige</i>
         <?php
     }
     
-        elseif($donnees['idMeteo'] >= 701 && $donnees['idMeteo'] <= 781)
+    elseif($donnees['weather'] >= 701 && $donnees['weather'] <= 781)
     {
         ?>
-        <i class="wi wi-dust">Brouillard</i>
+        <i class="wi wi-dust"></i> Brouillard
         <?php
     }
+    
+    echo $donnees['tempnow'] - 273.15,'°C';
+    echo 'Température max ',$donnees['tempsmax'] - 273.15,'°C';
+    echo 'Température min ',$donnees['tempsmin'] - 273.15,'°C';
+    echo 'wesh',$donnees['sunrise'];
+    
 }
 
 
