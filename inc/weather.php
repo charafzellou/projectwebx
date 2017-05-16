@@ -33,10 +33,11 @@ while ($donnees = $reponse->fetch())
     if( $donnees['weather'] == 800)
     {
     ?>
-        <i class="wi wi-day-sunny"></i>Ensoleillé
+        <i class="wi wi-day-sunny"></i>
     <?php
     }
     
+    echo $donnees['description'];
     echo $donnees['tempnow'] - 273.15,'°C';
     echo 'Température max ',$donnees['tempsmax'] - 273.15,'°C';
     echo 'Température min ',$donnees['tempsmin'] - 273.15,'°C';
