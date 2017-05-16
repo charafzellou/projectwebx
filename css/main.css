@@ -96,6 +96,7 @@ header
 	line-height: 32px;
 	color: #1b1b5c;
 	text-transform: uppercase;
+	width: 100%;
 	
 }
 #menu-header-bottom .menu , #menu-secondary .menu{
@@ -150,7 +151,10 @@ i
 	color: white;
 	font-size: 50px;
 }
-
+.weather
+{
+	color: white;
+}
 
 
 
