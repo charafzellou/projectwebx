@@ -9,11 +9,11 @@
 				require_once('inc/weather.php');
 			?>
         </div>
-        <div href="#" class="menu-item menu-item-type-post_type menu-item-object-page dropdown col-lg-3">Mon compte
-        	<!--ul>
+        <div href="#" id="conn" class="menu-item menu-item-type-post_type menu-item-object-page col-lg-3">Mon compte
+        	<ul class="dd-content">
                 <li><a id="connection-item" href="#">Se connecter</a></li>
 				<li><a id="connection-item" href="#">Créer un compte</a></li>
-			</ul-->
+			</ul>
         </div>
     </div>
 </div>        
@@ -24,13 +24,14 @@
             <a href="index.php">Accueil</a>
         </li>
 		
-        <li class="dropdown menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
-			<ul href="services.php" class="dropdown-content">Services
+        <li class="dd menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
+			Services
+			<ul href="services.php" class="dd-content">
 				<li class="">
 					<a href="#">Tarifs</a>
 				</li>
 				<li class="">
-					<a href="#">Réserver</a>
+					<a href="#">Réservation</a>
 				</li>
 			</ul>
 			</div>
