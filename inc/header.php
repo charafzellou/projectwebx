@@ -21,10 +21,18 @@
 <nav id="menu-header-bottom" class="col-lg-12">
     <ul id="menu-primary-bottom" class="menu row">
         <li class="menu-item menu-item-type-post_type menu-item-object-page first col-lg-3">
-            <a href="#">Accueil</a>
+            <a href="index.php">Accueil</a>
         </li>
-        <li class="menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
-            <a href="#">Services</a>
+        <li class=" menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
+			<ul href="services.php" class="">Services
+				<li class="">
+					<a href="#">Tarifs</a>
+				</li>
+				<li class="">
+					<a href="#">Réserver</a>
+				</li>
+			</ul>
+			</div>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
             <a href="#">Aéroclub</a>
