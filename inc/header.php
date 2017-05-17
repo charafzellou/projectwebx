@@ -23,8 +23,9 @@
         <li class="menu-item menu-item-type-post_type menu-item-object-page first col-lg-3">
             <a href="index.php">Accueil</a>
         </li>
-        <li class=" menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
-			<ul href="services.php" class="">Services
+		
+        <li class="dropdown menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
+			<ul href="services.php" class="dropdown-content">Services
 				<li class="">
 					<a href="#">Tarifs</a>
 				</li>
@@ -34,6 +35,7 @@
 			</ul>
 			</div>
         </li>
+		
         <li class="menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
             <a href="#">Aéroclub</a>
         </li>
