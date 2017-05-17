@@ -4,7 +4,7 @@
     </div>
     
     <div id="menu-header-top">
-        <div href="#" class="col-lg-7" ><!--style ="background: red;"-->	
+        <div href="#" class="col-lg-7 weather" ><!--style ="background: red;"-->	
             <?php
 				require_once('inc/weather.php');
 			?>
