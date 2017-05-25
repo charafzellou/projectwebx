@@ -5,7 +5,7 @@ try
 {
 
     // On se connecte à MySQL
-    $bdd = new PDO('mysql:host=localhost;dbname=aen;charset=utf8', 'root', 'aenprojectx');
+    $bdd = new PDO('mysql:host=localhost;dbname=aen;charset=utf8', 'root', '****');
 
 }
 
