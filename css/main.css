@@ -68,7 +68,7 @@ header
 	left: 0;
 }
 
-#menu-header-top .col-lg-7
+#menu-header-top .col-lg-8
 {
 	height: 200px;
 }
@@ -89,7 +89,7 @@ header
 	text-align:center;
 	height: 15%;
 }
-#menu-header-bottom ,#menu-secondary, #conn{
+#menu-header-bottom ,#menu-secondary{
 	display: inline-block;
 	font-family: 'Days One', sans-serif;
 	font-size: 16px;
@@ -99,6 +99,33 @@ header
 	width: 100%;
 	
 }
+/*weather*/
+.weather
+{
+	color: white;
+}
+.description
+{
+	display:inline-flex;
+	font-size: 12px;
+}
+.temperature
+{
+	display:inline-flex;
+	font-size: 25px;
+}
+.maintemp
+{
+	font-size: 1.3em;
+}
+.secondarytemp
+{
+	font-size: 10px;
+	margin-top: -9px;
+	margin-left: 9px;
+}
+
+
 #menu-header-bottom .menu , #menu-secondary .menu{
 	/*width: 100%;*/
 	height: 100%;
@@ -111,8 +138,13 @@ header
 	border-top: 6px solid #fff;
 }
 #conn
-{
-	width:25%;
+{	
+	display: inline-block;
+	font-family: 'Days One', sans-serif;
+	font-size: 10px;
+	color: #1b1b5c;
+	text-transform: uppercase;
+	width:15%;
 	text-align: center;
 	background: #fff;
 	border-bottom: 6px solid #fff;
@@ -152,27 +184,23 @@ i
 	color: white;
 	font-size: 50px;
 }
-.weather
-{
-	color: white;
-}
-
 .dd
 {
     position: relative;
 	display: inline-block;
+	padding: 0 !important;
 }
 
 .dd-content 
 {
-
+	padding: 0 !important;
     display: none;
     position: absolute;
     width:100%;
     min-width: 160px;
     /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
     z-index: 1;
-	margin-left: -15px;
+	/*margin-left: -15px;*/
 	background-color: white;
 }
 
@@ -182,11 +210,10 @@ i
     text-decoration: none;
     display: block;
 	text-align: center;
-	margin-left: -15px;
+	/*margin-left: -15px;*/
 }
 
-/*.dd-content li:hover {background-color: #f1f1f1}
-*/
+/*.dd-content li:hover {background-color: #f1f1f1}*/
 .dd:hover .dd-content {
 	display: block;
 }
@@ -195,3 +222,8 @@ i
 {
 	background-color: #3e8e41;
 }*/
+
+.carousel-control.left, .carousel-control.right
+{
+	background-image: none !important;
+}

@@ -4,15 +4,15 @@
     </div>
     
     <div id="menu-header-top">
-        <div href="#" class="col-lg-7 weather" ><!--style ="background: red;"-->	
+        <div href="#" class="col-lg-8 weather" ><!--style ="background: red;"-->	
             <?php
 				require_once('inc/weather.php');
 			?>
         </div>
-        <div href="#" id="conn" class="menu-item menu-item-type-post_type menu-item-object-page col-lg-3">Mon compte
+        <div href="#" id="conn" class="dd menu-item menu-item-type-post_type menu-item-object-page col-lg-2">Mon compte
         	<ul class="dd-content">
-                <li><a id="connection-item" href="#">Se connecter</a></li>
-				<li><a id="connection-item" href="#">Créer un compte</a></li>
+                <li><a  href="#">Se connecter</a></li>
+				<li><a  href="#">Créer un compte</a></li>
 			</ul>
         </div>
     </div>
@@ -28,7 +28,7 @@
 			Services
 			<ul href="services.php" class="dd-content">
 				<li class="">
-					<a href="#">Tarifs</a>
+					<a href="tarifs.php">Tarifs</a>
 				</li>
 				<li class="">
 					<a href="#">Réservation</a>

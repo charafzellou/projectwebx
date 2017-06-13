@@ -5,7 +5,7 @@ try
 {
 
     // On se connecte à MySQL
-    $bdd = new PDO('mysql:host=localhost;dbname=aen;charset=utf8', 'root', '****');
+    $bdd = new PDO('mysql:host=localhost;dbname=aen;charset=utf8', 'root', 'aenprojectx');
 
 }
 
@@ -32,16 +32,22 @@ while ($donnees = $reponse->fetch())
 	$req = $bdd->query('SELECT icone FROM correspondanceIDWeather WHERE IDWeather = "'.$id.'"');
 
  	$d = $req->fetch();
-    ?>
-        <i class="wi <?php echo $d['icone']?>"></i>
+	?>
+		<div class="description">
+			<i class="wi <?php echo $d['icone']?>"></i>
+			</br>
     <?php
     $req->closeCursor();
 
-    echo $donnees['description'];
-    echo $donnees['tempnow'] - 273.15,'°C';
-    echo 'Température max ',$donnees['tempsmax'] - 273.15,'°C';
-    echo 'Température min ',$donnees['tempsmin'] - 273.15,'°C';
-	?>
+	echo $donnees['description'].' ';?>
+		</div>
+		<div class="temperature">
+			<div class="maintemp"><?php echo $donnees['tempnow'] - 273.15,'°C';?></div>
+			<div class="secondarytemp">
+				<?php echo 'Max ',$donnees['tempsmax'] - 273.15,'°C';?></br>
+				<?php echo 'Min ',$donnees['tempsmin'] - 273.15,'°C';?>
+			</div>
+		</div>
 		<i class="wi wi-barometer"></i>
 	<?php
 	echo $donnees['pressure'],' hPa';
