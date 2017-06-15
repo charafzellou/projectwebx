@@ -39,8 +39,9 @@
 
 				</tr>
 				</thead>
-				<?php 
-				$reponse = $bdd->query('SELECT * FROM redevanceAtterrissage');
+				<?php
+				$reponse = $bdd->query('SELECT * FROM redevanceAtterrissage');;
+				
 				while ($donnees = $reponse->fetch())
 				{
 					echo '
@@ -65,7 +66,7 @@
 
 					</tr>
 					</tbody>';
-				}		
+				}
 				$reponse->closeCursor();
 				?>	
 			</table>

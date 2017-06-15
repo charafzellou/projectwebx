@@ -1,0 +1,10 @@
+<config>
+	<bdd_config>
+		protocol="mysql"
+		host="127.0.0.1"
+		dbname="aen"
+		charset="utf8"
+		login="root"
+		password=""
+	</bdd_config>
+</config>
