@@ -12,8 +12,8 @@
         </div>
         <div href="#" id="conn" class="dd menu-item menu-item-type-post_type menu-item-object-page col-lg-2">Mon compte
         	<ul class="dd-content">
-                <li><a  href="#">Se connecter</a></li>
-				<li><a  href="#">Créer un compte</a></li>
+                <li><a  href="login.php">Se connecter</a></li>
+				<li><a  href="register.php">Créer un compte</a></li>
 			</ul>
         </div>
     </div>
@@ -32,17 +32,17 @@
 					<a href="tarifs.php">Tarifs</a>
 				</li>
 				<li class="">
-					<a href="#">Réservation</a>
+					<a href="services.php">Réservation</a>
 				</li>
 			</ul>
 			</div>
         </li>
 		
         <li class="menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
-            <a href="#">Aéroclub</a>
+            <a href="aeroclub.php">Aéroclub</a>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page last col-lg-3">
-            <a href="#">à propos</a>
+            <a href="apropos.php">à propos</a>
         </li>
     </ul>
 </nav>
