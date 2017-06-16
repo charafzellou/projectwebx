@@ -48,10 +48,9 @@ a:hover, a:active, a:focus {
 	float: left;
 	width: 20%;
 	background-color: #93A5C4;
-	padding-bottom: auto;
 }
 .content {
-	padding: 10px 0px 10px 0px;
+	padding: 0px 0px 10px 0px;
 	width: 80%;
 	float: left;
 }

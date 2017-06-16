@@ -1,1 +1,1 @@
-<p align="center"><a href="">Déconnexion</a></p>
+<p align="center"><a href="../">Déconnexion</a></p>

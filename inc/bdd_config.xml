@@ -7,4 +7,11 @@
 		login="root"
 		password=""
 	</bdd_config>
+	<api_config>
+		api_url="http://api.openweathermap.org/data/2.5/weather?id=3019265&APPID=7ebcbda2434ee5db9e25c2b1ae8e6d99"
+		api_host="api.openweathermap.org"
+		api_id="3019265"
+		api_appid="7ebcbda2434ee5db9e25c2b1ae8e6d99"
+		api_lang="fr"
+	</api_config>
 </config>
