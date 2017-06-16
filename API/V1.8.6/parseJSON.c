@@ -28,11 +28,26 @@ int parseJSON(){
     fseek( WeatherJSON , 0L , SEEK_END);
     long lSize = ftell( WeatherJSON );
     rewind( WeatherJSON );
-    charJSON = calloc( 1, lSize+1 );
-        if( charJSON == NULL ) fclose(charJSON), fputs("memory alloc fails", stderr), return -1;
-    fread( charJSON , lSize, 1 , fp);
-        if( 1 != fread( charJSON , lSize, 1 , fp) )
-            fclose(WeatherJSON),free(charJSON),fputs("entire read fails", stderr), return -1;
+
+    char* charJSON = (char*) malloc(sizeof(char)*lSize);
+        if( charJSON == NULL ){
+            fclose(WeatherJSON);
+            fputs("Memory alloc for CHARJSON fails!", stderr);
+            return -1;
+        }
+
+    // Stockage et vérification
+    size_t result = fread( charJSON, 1, lSize, WeatherJSON);
+        if( result == NULL ){
+            fclose(WeatherJSON);
+            free(charJSON);
+            fputs("Entire read of WeatherJSON fails", stderr);
+            return -1;
+        }
+        if (result != lSize) {
+            fputs("Reading error in result",stderr);
+            return -1;
+        }
 
     // Fermeture du flux-fichier
     fclose(WeatherJSON);
@@ -40,16 +55,18 @@ int parseJSON(){
     int pos_actuelle = 0;
     char char_actuel = "";
 
-    strstr(WeatherJSON, "\"weather\":[{\"id\":");
-    char_actuel = fgetc(WeatherJSON);
-    while(char_actuel != ',')
-    	char_actuel = fgetc(WeatherJSON);
+    strstr(charJSON, "\"weather\":[{\"id\":");
+    char_actuel = fgetc(charJSON);
+    while(char_actuel != ','){
+    	char_actuel = fgetc(charJSON);
+    }
+    printf("%s", char_actuel);
 
     fseek(WeatherJSON, 16, SEEK_CUR);
     while(char_actuel != '"')
     {
     	sizeofmain++;
-	char_actuel = fgetc(WeatherJSON);
+        char_actuel = fgetc(WeatherJSON);
     }
 	printf("l38");
     description = malloc (sizeof(char) * (sizeofmain + 1));

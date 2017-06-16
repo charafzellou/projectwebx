@@ -37,7 +37,7 @@
 		<Linker>
 			<Add library="C:/Program Files (x86)/CodeBlocks/MinGW/lib/libws2_32.a" />
 			<Add library="C:/Program Files (x86)/CodeBlocks/MinGW/lib/libwsock32.a" />
-			<Add library="../../../../Program Files (x86)/CodeBlocks/MinGW/lib/libmysqlclient.a" />
+			<Add library="C:/Program Files (x86)/CodeBlocks/MinGW/lib/libmysqlclient.a" />
 		</Linker>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />

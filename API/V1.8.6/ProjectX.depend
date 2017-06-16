@@ -160,3 +160,61 @@
 	<stdlib.h>
 	<string.h>
 
+1497609590 source:c:\users\chaze exodus\documents\github\projectwebx\api\v1.8.6\main.c
+	"readInfo.h"
+	"writeInfo.h"
+	"parseJSON.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1497603830 c:\users\chaze exodus\documents\github\projectwebx\api\v1.8.6\readinfo.h
+	<winsock2.h>
+	<Ws2tcpip.h>
+	<winsock.h>
+	<MYSQL/mysql.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<netdb.h>
+	<my_global.h>
+	<mysql.h>
+	<time.h>
+
+1497603830 c:\users\chaze exodus\documents\github\projectwebx\api\v1.8.6\writeinfo.h
+
+1497603830 c:\users\chaze exodus\documents\github\projectwebx\api\v1.8.6\parsejson.h
+	<winsock2.h>
+	<Ws2tcpip.h>
+	<winsock.h>
+	<MYSQL/mysql.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<netdb.h>
+	<my_global.h>
+	<mysql.h>
+	<time.h>
+
+1497607958 source:c:\users\chaze exodus\documents\github\projectwebx\api\v1.8.6\readinfo.c
+	"readInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1497603830 source:c:\users\chaze exodus\documents\github\projectwebx\api\v1.8.6\writeinfo.c
+	"writeInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1497609998 source:c:\users\chaze exodus\documents\github\projectwebx\api\v1.8.6\parsejson.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parseJSON.h"
+
