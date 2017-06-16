@@ -19,7 +19,7 @@ $host = '127.0.0.1';
 $dbname = 'aen';
 $charset = 'utf8';
 $login = 'root';
-$password = '';
+$password = 'aenprojectx';
 
 try
 {

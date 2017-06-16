@@ -9,7 +9,7 @@ $reponse = $bdd->query('SELECT * FROM meteo');
 while ($donnees = $reponse->fetch())
 {
     $id = $donnees['weather'];
-	$req = $bdd->query('SELECT icone FROM correspondanceIDWeather WHERE IDWeather = "'.$id.'"');
+	$req = $bdd->query('SELECT icone FROM correspondanceidweather WHERE IDWeather = "'.$id.'"');
 
  	$d = $req->fetch();
 	?>
