@@ -1,0 +1,162 @@
+# depslib dependency file v1.0
+1490219563 source:d:\users\loïc colat\documents\esgi\projet annuel\api\projectx\main.c
+	"readInfo.h"
+	"writeInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1488231721 d:\users\loïc colat\documents\esgi\projet annuel\api\projectx\function.h
+	<winsock2.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+
+1488231217 source:d:\users\loïc colat\documents\esgi\projet annuel\api\projectx\function.c
+	"function.h"
+	<stdio.h>
+
+1490303993 source:d:\users\loïc colat\documents\esgi\projet annuel\api\projectx\readinfo.c
+	"readInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1490303635 d:\users\loïc colat\documents\esgi\projet annuel\api\projectx\readinfo.h
+	<winsock2.h>
+	<Ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<netdb.h>
+
+1490483082 d:\users\loïc colat\documents\esgi\projet annuel\api\projectx\writeinfo.h
+
+1490483198 source:d:\users\loïc colat\documents\esgi\projet annuel\api\projectx\writeinfo.c
+	"writeInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1493491761 source:c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8\main.c
+	"readInfo.h"
+	"writeInfo.h"
+	"parseJSON.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1490459144 c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8\readinfo.h
+	<winsock2.h>
+	<Ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<netdb.h>
+
+1490459146 c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8\writeinfo.h
+
+1490459144 source:c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8\readinfo.c
+	"readInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1490459146 source:c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8\writeinfo.c
+	"writeInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1493491664 c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8\parsejson.h
+
+1494512080 source:c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8.1\main.c
+	"readInfo.h"
+	"writeInfo.h"
+	"parseJSON.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1490459144 c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8.1\readinfo.h
+	<winsock2.h>
+	<Ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<netdb.h>
+
+1490459146 c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8.1\writeinfo.h
+
+1493491664 c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8.1\parsejson.h
+
+1490459144 source:c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8.1\readinfo.c
+	"readInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1490459146 source:c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8.1\writeinfo.c
+	"writeInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1494513705 source:c:\users\chaze exodus\desktop\studies\esgi2\project x\etape 1\application météo\v1.8.1\parsejson.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1494523390 source:c:\users\abdel\desktop\v1.8.2\main.c
+	"readInfo.h"
+	"writeInfo.h"
+	"parseJSON.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1494481574 c:\users\abdel\desktop\v1.8.2\readinfo.h
+	<winsock2.h>
+	<Ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<netdb.h>
+
+1494481576 c:\users\abdel\desktop\v1.8.2\writeinfo.h
+
+1494481574 c:\users\abdel\desktop\v1.8.2\parsejson.h
+
+1494851516 source:c:\users\abdel\desktop\v1.8.2\parsejson.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<winsock.h>
+	<MYSQL/mysql.h>
+
+1494851546 source:c:\users\abdel\desktop\v1.8.2\readinfo.c
+	"readInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<winsock.h>
+	<MYSQL/mysql.h>
+
+1494481576 source:c:\users\abdel\desktop\v1.8.2\writeinfo.c
+	"writeInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
