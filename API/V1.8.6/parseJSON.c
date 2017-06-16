@@ -6,11 +6,6 @@
 int parseJSON(){
 	printf("\nparseJSON\n");
 
-	// Initialisation des variables
-	int saut = 0;
-    int sizeofmain = 0;
-    int i = 0;
-
     // Ouverture du fichier WEATHERJSON
     FILE* WeatherJSON = fopen("weather.json", "r");
 	if(WeatherJSON == NULL)
@@ -20,9 +15,9 @@ int parseJSON(){
     }
 
     // Initilisation des variables liées à la météo
-    char* description = NULL;
-    char weather[4] = "", temp_now[7] = "", pressure[5] = "", humidity[3] = "", temp_min[7] = "", temp_max[7] = "",
-        visibility[6] = "", wind_speed[4] = "", wind_degree[4] = "", sun_sunrise[11] = "", sun_sunset[11] = "";
+    char* weather = NULL, description = NULL, temp_now = NULL, pressure = NULL, humidity = NULL,
+        temp_min = NULL, temp_max = NULL, visibility = NULL, wind_speed = NULL, wind_degree = NULL,
+        sun_sunrise = NULL, sun_sunset = NULL;
 
     // Allocation du fichier dans une variable
     fseek( WeatherJSON , 0L , SEEK_END);
@@ -52,180 +47,31 @@ int parseJSON(){
     // Fermeture du flux-fichier
     fclose(WeatherJSON);
 
-    int pos_actuelle = 0;
+    char* pos_actuelle = "";
     char char_actuel = "";
 
-    strstr(charJSON, "\"weather\":[{\"id\":");
-    char_actuel = fgetc(charJSON);
-    while(char_actuel != ','){
-    	char_actuel = fgetc(charJSON);
-    }
-    printf("%s", char_actuel);
+    //
+    pos_actuelle = strstr(charJSON, "\"weather\":[{\"id\":");
 
-    fseek(WeatherJSON, 16, SEEK_CUR);
-    while(char_actuel != '"')
-    {
-    	sizeofmain++;
-        char_actuel = fgetc(WeatherJSON);
-    }
-	printf("l38");
-    description = malloc (sizeof(char) * (sizeofmain + 1));
-    fseek(WeatherJSON, -(sizeofmain + 1), SEEK_CUR);
 
-    fread(description, sizeofmain, 1, WeatherJSON);
-    description[sizeofmain] = '\0';
 
-    printf("%s",description);
 
-    while(saut < 3){
-        char_actuel = fgetc(WeatherJSON);
-        if(char_actuel == ','){
-            saut++;
-        }
-    }
-    saut = 0;
-    while(saut < 2){
-        char_actuel = fgetc(WeatherJSON);
-         if(char_actuel == ':'){
-            saut++;
-        }
-    }
-    //char_actuel = fgetc(WeatherJSON);
-    //printf("\n res : %c et saut : %d",char_actuel, saut);
 
-   // fseek(WeatherJSON, 90, SEEK_CUR);
-   // char char_actuel = "";
-    char_actuel = fgetc(WeatherJSON);
-    while(char_actuel != ',')
-    {
-        temp_now[i] = char_actuel;
-        char_actuel = fgetc(WeatherJSON);
-        i++;
-    }
-    //fread(temp_now, 6, 1, WeatherJSON);
-    while(char_actuel != ':'){
-        char_actuel = fgetc((WeatherJSON));
-    }
-   // printf("\n\n resbis : %c", char_actuel);
-   // temp_now[i] = '/0';
-    i = 0;
-    char_actuel = fgetc(WeatherJSON);
-    while(char_actuel != ',')
-    {
-        pressure[i] = char_actuel;
-        char_actuel = fgetc(WeatherJSON);
-        i++;
-    }
-    // printf("\n\n resbis : %s", pressure);
-    while(char_actuel != ':'){
-        char_actuel = fgetc((WeatherJSON));
-    }
-     i = 0;
-    char_actuel = fgetc(WeatherJSON);
-    while(char_actuel != ',')
-    {
-        humidity[i] = char_actuel;
-        char_actuel = fgetc(WeatherJSON);
-        i++;
-    }
-   // printf("\n\n resbis : %s", humidity);
-     //printf("\n\n caractere : %c", char_actuel);
-    //humidity[i] = '/0';
-     while(char_actuel != ':'){
-        char_actuel = fgetc((WeatherJSON));
-    }
-     i = 0;
-    char_actuel = fgetc(WeatherJSON);
-    while(char_actuel != ',')
-    {
-        temp_min[i] = char_actuel;
-        char_actuel = fgetc(WeatherJSON);
-        i++;
-    }
-    //printf("\n\n resbis : %s", temp_min);
-    while(char_actuel != ':'){
-        char_actuel = fgetc((WeatherJSON));
-    }
-     i = 0;
-    char_actuel = fgetc(WeatherJSON);
-    while(char_actuel != '}')
-    {
-        temp_max[i] = char_actuel;
-        char_actuel = fgetc(WeatherJSON);
-        i++;
-    }
-    //printf("\n\n resbis : %s", temp_max);
-    //temp_max[i] = '/0';
-    while(char_actuel != ':'){
-        char_actuel = fgetc((WeatherJSON));
-    }
-    i = 0;
-    char_actuel = fgetc(WeatherJSON);
-    while(char_actuel != ',')
-    {
-        visibility[i] = char_actuel;
-        char_actuel = fgetc(WeatherJSON);
-        i++;
-    }
-    //printf("\n\n resbis : %s", visibility);
-    saut = 0;
-    while(saut < 2){
-        char_actuel = fgetc(WeatherJSON);
-         if(char_actuel == ':'){
-            saut++;
-        }
-    }
-    i = 0;
-    char_actuel = fgetc(WeatherJSON);
-    while(char_actuel != ',')
-    {
-        wind_speed[i] = char_actuel;
-        char_actuel = fgetc(WeatherJSON);
-        i++;
-    }
-    //printf("\n\n resbis : %s", wind_speed);
-    while(char_actuel != ':'){
-        char_actuel = fgetc((WeatherJSON));
-    }
-    i = 0;
-    char_actuel = fgetc(WeatherJSON);
-    while(char_actuel != '}')
-    {
-        wind_degree[i] = char_actuel;
-        char_actuel = fgetc(WeatherJSON);
-        i++;
-    }
-    // printf("\n\n resbis : %s", wind_degree);
-     saut = 0;
-    while(saut < 9){
-        char_actuel = fgetc(WeatherJSON);
-         if(char_actuel == ':'){
-            saut++;
-        }
-    }
-    i = 0;
-    char_actuel = fgetc(WeatherJSON);
-    while(char_actuel != ',')
-    {
-        sun_sunrise[i] = char_actuel;
-        char_actuel = fgetc(WeatherJSON);
-        i++;
-    }
-    //printf("\n\n resbis : %s", sun_sunrise);
-    while(char_actuel != ':'){
-        char_actuel = fgetc((WeatherJSON));
-    }
-    i = 0;
-    char_actuel = fgetc(WeatherJSON);
-    while(char_actuel != '}')
-    {
-        sun_sunset[i] = char_actuel;
-        char_actuel = fgetc(WeatherJSON);
-        i++;
-    }
-    fclose(WeatherJSON);
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Passage à la partie SQL
+    /*
     MYSQL sql;
     mysql_init(&sql);
     mysql_options(&sql,MYSQL_READ_DEFAULT_GROUP,"option");
@@ -245,5 +91,6 @@ int parseJSON(){
         printf("Une erreur a eu lieu lors de la connexion sur la base de données!");
     }
     free(description);
+    */
     return 0;
 }
