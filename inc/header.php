@@ -24,7 +24,6 @@
         <li class="menu-item menu-item-type-post_type menu-item-object-page first col-lg-3">
             <a href="index.php">Accueil</a>
         </li>
-		
         <li class="dd menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
 			Services
 			<ul href="services.php" class="dd-content">
@@ -37,7 +36,6 @@
 			</ul>
 			</div>
         </li>
-		
         <li class="menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
             <a href="aeroclub.php">Aéroclub</a>
         </li>
