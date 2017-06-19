@@ -40,7 +40,7 @@
 				</tr>
 				</thead>
 				<?php
-				$reponse = $bdd->query('SELECT * FROM redevanceAtterrissage');;
+				$reponse = $bdd->query('SELECT * FROM redevanceatterrissage');;
 				
 				while ($donnees = $reponse->fetch())
 				{
