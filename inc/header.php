@@ -25,19 +25,10 @@
             <a href="index.php">Accueil</a>
         </li>
         <li class="dd menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
-			Services
-			<ul href="services.php" class="dd-content">
-				<li class="">
-					<a href="tarifs.php">Tarifs</a>
-				</li>
-				<li class="">
-					<a href="services.php">Réservation</a>
-				</li>
-			</ul>
-			</div>
+			<a href="services.php">Services</a>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page col-lg-3">
-            <a href="aeroclub.php">Aéroclub</a>
+            <a href="tarifs.php">Tarifs</a>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page last col-lg-3">
             <a href="apropos.php">à propos</a>

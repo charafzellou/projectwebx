@@ -219,13 +219,11 @@ header
 .first
 {
 	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
 }
 
 .last
 {
 	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px
 }
 
 
@@ -276,4 +274,14 @@ header
 .carousel-control.left, .carousel-control.right
 {
 	background-image: none !important;
+}
+
+.services
+{
+	font-family: 'Days One', sans-serif !important;
+	
+}
+.services > .col-md-3
+{
+	color: #1b1b5c;
 }
