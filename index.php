@@ -13,11 +13,7 @@
 				require_once('inc/header.php');
 			?>
 		</header>
-		
-		<div class="content">
-		<div class="post">
-			
-			
+					
 			<div id="myCarousel" class="row carousel slide" data-ride="carousel">
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
@@ -83,7 +79,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+
 		
 		<footer class="row">
 			<?php
