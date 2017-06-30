@@ -21,7 +21,7 @@
             <div class="col-md-3 col-sm-8">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-						<img src="img/hangar.png" style="width: -moz-available;">
+						<img src="img/hangar.png" style="width: 100%;">
                     </div>
                     <div class="panel-body">
                         <h4>Stationnement</h4>
@@ -34,7 +34,7 @@
             <div class="col-md-3 col-sm-8">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-						<img src="img/pump.png" style="width: -moz-available;">
+						<img src="img/pump.png" style="width: 100%;">
                     </div>
                     <div class="panel-body">
                         <h4>Avitaillement</h4>
@@ -47,7 +47,7 @@
             <div class="col-md-3 col-sm-8">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <img src="img/cleanning.png" style="width: -moz-available;">
+                        <img src="img/cleanning.png" style="width: 100%;">
                     </div>
                     <div class="panel-body">
                         <h4>Nettoyage intérieur</h4>
@@ -64,7 +64,7 @@
             <div class="col-md-3 col-sm-8">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-						<img src="img/skydiving.png" style="width: -moz-available;">
+						<img src="img/skydiving.png" style="width: 100%;">
                     </div>
                     <div class="panel-body">
                         <h4>Parachutisme</h4>
@@ -77,7 +77,7 @@
             <div class="col-md-3 col-sm-8">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-						<img src="img/cessna.png" style="width: -moz-available;">
+						<img src="img/cessna.png" style="width: 100%;">
                     </div>
                     <div class="panel-body">
                         <h4>Baptême de l'air</h4>
@@ -90,7 +90,7 @@
             <div class="col-md-3 col-sm-8">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <img src="img/lesson.png" style="width: -moz-available;">
+                        <img src="img/lesson.png" style="width: 100%;">
                     </div>
                     <div class="panel-body">
                         <h4>Leçon de pilotage</h4>
@@ -103,7 +103,7 @@
              <div class="col-md-3 col-sm-8">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <img src="img/glider.png" style="width: -moz-available;">
+                        <img src="img/glider.png" style="width: 100%;">
                     </div>
                     <div class="panel-body">
                         <h4>ULM</h4>

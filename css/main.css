@@ -41,7 +41,10 @@ header
 	color: #1b1b5c;
 	font-size: 15px;
 }
-
+body
+{
+	background-color: white;
+}
 
 
 .menu {
