@@ -1,0 +1,45 @@
+body {
+	font: 16px/18px sans-serif;	
+	color: #ffffff;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	text-align: justify;
+    margin: 0;
+}
+/*
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+*/
+nav
+{
+    height: 120px;
+    background-color: #0e044d;
+    
+}
+.dropdown
+{
+    right: 0;
+}
+
+.dropdown > ul {
+	list-style: none;
+	visibility: hidden;
+}
+.dropdown:hover > ul {
+	visibility: visible;
+}

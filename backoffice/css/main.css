@@ -2,12 +2,21 @@
 @import url('https://fonts.googleapis.com/css?family=Leckerli+One');
 
 /*boot*/
+.row{
+	text-align : center;
+}
+
+:required
+{
+    background-color: red;
+}
+
 .container {
 	padding-right: 10px;
 	padding-left: 10px;
 	margin-right: auto;
 	margin-left: auto;
-	background: url('../img/background.jpg') top center no-repeat fixed;
+	background: url('../img/background.jpg') top ;
 	font: 16px/18px sans-serif;	
 	color: #ffffff;
 	-webkit-background-size: cover;
@@ -39,9 +48,12 @@ header
 	font-family: 'Days One', sans-serif;
 	display: block;
 	color: #1b1b5c;
-	font-size: 18px;
+	font-size: 15px;
 }
-
+body
+{
+	background-color: white;
+}
 
 
 .menu {
@@ -99,14 +111,20 @@ header
 	width: 100%;
 	
 }
-/*weather*/
+
 .weather
 {
+	width: 60%;
 	color: white;
+}
+.weathericone
+{
+	color: #1b1b5c;
+	font-size: 38px;
 }
 .description
 {
-	display:inline-flex;
+	display:inline-block;
 	font-size: 12px;
 }
 .temperature
@@ -114,15 +132,67 @@ header
 	display:inline-flex;
 	font-size: 25px;
 }
+.date
+{
+	text-align: center;
+	color:  #1b1b5c;
+}
+.tempmin
+{
+	color: #2388ff;
+}
+
+.tempmax
+{
+	color: #ff7f00;
+}
+
 .maintemp
 {
-	font-size: 1.3em;
+	font-size: 1.6em;
+	display: inline-block;
 }
 .secondarytemp
 {
 	font-size: 10px;
-	margin-top: -9px;
-	margin-left: 9px;
+	display: inline-block;
+}
+.leftmet
+{
+	width: 14%;
+}
+.centermet
+{
+	margin-left: 10px;
+	width: 44%;
+}
+.rightmet
+{
+	width: 38%;
+}
+.meteolist
+{
+	padding: 0% !important;
+	margin-left: 2%;
+	text-align: right;
+}
+.meteolist > li > span
+{
+	float: left;
+}
+.meteolist > li
+{
+	display: block;
+}
+.lastupdate
+{
+	display: inline-block;
+	font-size: xx-small;
+	float: right !important;
+}
+.tab-pane div
+{
+	float: left;
 }
 
 
@@ -163,13 +233,11 @@ header
 .first
 {
 	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
 }
 
 .last
 {
 	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px
 }
 
 
@@ -177,12 +245,6 @@ header
 #menu-header-bottom .menu-item:hover, #menu-header-bottom .current-menu-item , #menu-secondary .menu-item:hover, #connection-item:hover, .dd-content li:hover{
 	background: #fff;
 	border-bottom: 6px solid #1b1b5c;
-}
-
-i
-{
-	color: white;
-	font-size: 50px;
 }
 .dd
 {
@@ -226,4 +288,14 @@ i
 .carousel-control.left, .carousel-control.right
 {
 	background-image: none !important;
+}
+
+.services
+{
+	font-family: 'Days One', sans-serif !important;
+	
+}
+.services > .col-md-3
+{
+	color: #1b1b5c;
 }
