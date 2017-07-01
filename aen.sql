@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
+-- version 4.2.12deb2+deb8u2
+-- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Ven 16 Juin 2017 à 13:35
--- Version du serveur :  5.7.14
--- Version de PHP :  5.6.25
+-- Client :  localhost
+-- Généré le :  Sam 01 Juillet 2017 à 08:33
+-- Version du serveur :  5.5.54-0+deb8u1
+-- Version de PHP :  5.6.30-0+deb8u1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de données :  `aen`
@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 -- Structure de la table `admin`
 --
 
-CREATE TABLE `admin` (
-  `idAdmin` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `admin` (
+`idAdmin` int(11) NOT NULL,
   `prenom` varchar(100) COLLATE utf8_bin NOT NULL,
   `login` varchar(100) COLLATE utf8_bin NOT NULL,
   `mdp` varchar(100) COLLATE utf8_bin NOT NULL
@@ -39,8 +39,8 @@ CREATE TABLE `admin` (
 -- Structure de la table `avion`
 --
 
-CREATE TABLE `avion` (
-  `idAvion` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `avion` (
+`idAvion` int(11) NOT NULL,
   `nom` varchar(100) COLLATE utf8_bin NOT NULL,
   `type` varchar(100) COLLATE utf8_bin NOT NULL,
   `categorie` varchar(100) COLLATE utf8_bin NOT NULL,
@@ -55,8 +55,8 @@ CREATE TABLE `avion` (
 -- Structure de la table `bia`
 --
 
-CREATE TABLE `bia` (
-  `idBIA` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bia` (
+`idBIA` int(11) NOT NULL,
   `iDClient` int(11) NOT NULL,
   `iDStaff` int(11) NOT NULL,
   `iDAvion` int(11) NOT NULL,
@@ -72,8 +72,8 @@ CREATE TABLE `bia` (
 -- Structure de la table `client`
 --
 
-CREATE TABLE `client` (
-  `idClient` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `client` (
+`idClient` int(11) NOT NULL,
   `login` varchar(100) COLLATE utf8_bin NOT NULL,
   `mdp` varchar(100) COLLATE utf8_bin NOT NULL,
   `nom` varchar(100) COLLATE utf8_bin NOT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE `client` (
   `adresse` varchar(100) COLLATE utf8_bin NOT NULL,
   `telephone` varchar(100) COLLATE utf8_bin NOT NULL,
   `adresseMail` varchar(100) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Contenu de la table `client`
@@ -195,8 +195,8 @@ INSERT INTO `client` (`idClient`, `login`, `mdp`, `nom`, `prenom`, `adresse`, `t
 -- Structure de la table `commande`
 --
 
-CREATE TABLE `commande` (
-  `iDCommande` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `commande` (
+`iDCommande` int(11) NOT NULL,
   `iDClient` int(11) NOT NULL,
   `iDRedevance` int(11) NOT NULL,
   `date` date NOT NULL,
@@ -213,7 +213,7 @@ CREATE TABLE `commande` (
 -- Structure de la table `correspondanceidweather`
 --
 
-CREATE TABLE `correspondanceidweather` (
+CREATE TABLE IF NOT EXISTS `correspondanceidweather` (
   `IDWeather` int(3) NOT NULL,
   `icone` varchar(30) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -291,8 +291,8 @@ INSERT INTO `correspondanceidweather` (`IDWeather`, `icone`) VALUES
 -- Structure de la table `facture`
 --
 
-CREATE TABLE `facture` (
-  `idFacture` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `facture` (
+`idFacture` int(11) NOT NULL,
   `idCommande` int(11) NOT NULL,
   `paiement` float NOT NULL,
   `methodedepaiement` varchar(100) COLLATE utf8_bin NOT NULL,
@@ -307,12 +307,12 @@ CREATE TABLE `facture` (
 -- Structure de la table `groupeacoustique`
 --
 
-CREATE TABLE `groupeacoustique` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `groupeacoustique` (
+`id` int(11) NOT NULL,
   `groupeAcoustique` varchar(2) COLLATE utf8_bin NOT NULL,
   `jour et soir (6h00-22h00)` float NOT NULL,
   `Nuit(22h00-6h00)` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Contenu de la table `groupeacoustique`
@@ -332,8 +332,8 @@ INSERT INTO `groupeacoustique` (`id`, `groupeAcoustique`, `jour et soir (6h00-22
 -- Structure de la table `meteo`
 --
 
-CREATE TABLE `meteo` (
-  `iDMeteo` int(5) NOT NULL,
+CREATE TABLE IF NOT EXISTS `meteo` (
+`iDMeteo` int(5) NOT NULL,
   `weather` varchar(200) COLLATE utf8_bin NOT NULL,
   `description` varchar(200) COLLATE utf8_bin NOT NULL,
   `tempnow` varchar(200) COLLATE utf8_bin NOT NULL,
@@ -345,15 +345,17 @@ CREATE TABLE `meteo` (
   `windspeed` varchar(150) COLLATE utf8_bin NOT NULL,
   `winddegree` varchar(200) COLLATE utf8_bin NOT NULL,
   `sunrise` varchar(200) COLLATE utf8_bin NOT NULL,
-  `sunset` varchar(200) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `sunset` varchar(200) COLLATE utf8_bin NOT NULL,
+  `dt` varchar(200) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Contenu de la table `meteo`
 --
 
-INSERT INTO `meteo` (`iDMeteo`, `weather`, `description`, `tempnow`, `pressure`, `humidity`, `tempsmin`, `tempsmax`, `visibility`, `windspeed`, `winddegree`, `sunrise`, `sunset`) VALUES
-(108, '800', 'ciel dégagé', '295.68', '1019', '53', '295.15', '296.15', '10000', '3.1', '60', '1497325836', '1497384053');
+INSERT INTO `meteo` (`iDMeteo`, `weather`, `description`, `tempnow`, `pressure`, `humidity`, `tempsmin`, `tempsmax`, `visibility`, `windspeed`, `winddegree`, `sunrise`, `sunset`, `dt`) VALUES
+(108, '800', 'ciel dégagé', '295.68', '1019', '53', '295.15', '296.15', '10000', '3.1', '60', '1497325836', '1497384053', '1497364200'),
+(109, '300', 'bruine légère', '288.68', '1014', '93', '288.15', '289.15}', '6000', '4.6', '290}', '1498881328', '1498939377}', '1498894200');
 
 -- --------------------------------------------------------
 
@@ -361,8 +363,8 @@ INSERT INTO `meteo` (`iDMeteo`, `weather`, `description`, `tempnow`, `pressure`,
 -- Structure de la table `planning`
 --
 
-CREATE TABLE `planning` (
-  `idPlanning` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `planning` (
+`idPlanning` int(11) NOT NULL,
   `idClient` int(11) NOT NULL,
   `iDStaff` int(11) NOT NULL,
   `idAvion` int(11) NOT NULL,
@@ -377,15 +379,15 @@ CREATE TABLE `planning` (
 -- Structure de la table `redevanceabris`
 --
 
-CREATE TABLE `redevanceabris` (
-  `categorie` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `redevanceabris` (
+`categorie` int(11) NOT NULL,
   `tarifmensuelbasesHT` float NOT NULL,
   `tarifmensuelbasesTTC` float NOT NULL,
   `tarifjournalierbasesHT` float NOT NULL,
   `tarifjournalierbasesTTC` float NOT NULL,
   `tarifjournaliernonbasesHT` float NOT NULL,
   `tarifjournaliernonbasesTTC` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `redevanceabris`
@@ -402,14 +404,14 @@ INSERT INTO `redevanceabris` (`categorie`, `tarifmensuelbasesHT`, `tarifmensuelb
 -- Structure de la table `redevanceatterrissage`
 --
 
-CREATE TABLE `redevanceatterrissage` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `redevanceatterrissage` (
+`id` int(11) NOT NULL,
   `TypesAvions` varchar(200) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `TypesAbonnement` varchar(200) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `HorsTaxes` float NOT NULL,
   `TVA` float NOT NULL,
   `TTC` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `redevanceatterrissage`
@@ -431,8 +433,8 @@ INSERT INTO `redevanceatterrissage` (`id`, `TypesAvions`, `TypesAbonnement`, `Ho
 -- Structure de la table `service`
 --
 
-CREATE TABLE `service` (
-  `idService` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `service` (
+`idService` int(11) NOT NULL,
   `nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `typeabonnement` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `tarifHT` int(11) NOT NULL,
@@ -446,8 +448,8 @@ CREATE TABLE `service` (
 -- Structure de la table `staff`
 --
 
-CREATE TABLE `staff` (
-  `idStaff` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `staff` (
+`idStaff` int(11) NOT NULL,
   `login` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `mdp` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
@@ -456,7 +458,7 @@ CREATE TABLE `staff` (
   `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `telephone` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `experience` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `staff`
@@ -483,85 +485,85 @@ INSERT INTO `staff` (`idStaff`, `login`, `mdp`, `nom`, `prenom`, `adresse`, `ema
 -- Index pour la table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`idAdmin`);
+ ADD PRIMARY KEY (`idAdmin`);
 
 --
 -- Index pour la table `avion`
 --
 ALTER TABLE `avion`
-  ADD PRIMARY KEY (`idAvion`);
+ ADD PRIMARY KEY (`idAvion`);
 
 --
 -- Index pour la table `bia`
 --
 ALTER TABLE `bia`
-  ADD PRIMARY KEY (`idBIA`);
+ ADD PRIMARY KEY (`idBIA`);
 
 --
 -- Index pour la table `client`
 --
 ALTER TABLE `client`
-  ADD PRIMARY KEY (`idClient`);
+ ADD PRIMARY KEY (`idClient`);
 
 --
 -- Index pour la table `commande`
 --
 ALTER TABLE `commande`
-  ADD PRIMARY KEY (`iDCommande`);
+ ADD PRIMARY KEY (`iDCommande`);
 
 --
 -- Index pour la table `correspondanceidweather`
 --
 ALTER TABLE `correspondanceidweather`
-  ADD UNIQUE KEY `IDWeather` (`IDWeather`);
+ ADD UNIQUE KEY `IDWeather` (`IDWeather`);
 
 --
 -- Index pour la table `facture`
 --
 ALTER TABLE `facture`
-  ADD PRIMARY KEY (`idFacture`);
+ ADD PRIMARY KEY (`idFacture`);
 
 --
 -- Index pour la table `groupeacoustique`
 --
 ALTER TABLE `groupeacoustique`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `meteo`
 --
 ALTER TABLE `meteo`
-  ADD PRIMARY KEY (`iDMeteo`);
+ ADD PRIMARY KEY (`iDMeteo`);
 
 --
 -- Index pour la table `planning`
 --
 ALTER TABLE `planning`
-  ADD PRIMARY KEY (`idPlanning`);
+ ADD PRIMARY KEY (`idPlanning`);
 
 --
 -- Index pour la table `redevanceabris`
 --
 ALTER TABLE `redevanceabris`
-  ADD PRIMARY KEY (`categorie`);
+ ADD PRIMARY KEY (`categorie`);
 
 --
 -- Index pour la table `redevanceatterrissage`
 --
 ALTER TABLE `redevanceatterrissage`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `service`
 --
 ALTER TABLE `service`
-  ADD PRIMARY KEY (`idService`);
+ ADD PRIMARY KEY (`idService`);
 
 --
 -- Index pour la table `staff`
 --
 ALTER TABLE `staff`
-  ADD PRIMARY KEY (`idStaff`);
+ ADD PRIMARY KEY (`idStaff`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -571,67 +573,67 @@ ALTER TABLE `staff`
 -- AUTO_INCREMENT pour la table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `idAdmin` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idAdmin` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `avion`
 --
 ALTER TABLE `avion`
-  MODIFY `idAvion` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idAvion` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `bia`
 --
 ALTER TABLE `bia`
-  MODIFY `idBIA` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idBIA` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `client`
 --
 ALTER TABLE `client`
-  MODIFY `idClient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+MODIFY `idClient` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=106;
 --
 -- AUTO_INCREMENT pour la table `commande`
 --
 ALTER TABLE `commande`
-  MODIFY `iDCommande` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `iDCommande` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `facture`
 --
 ALTER TABLE `facture`
-  MODIFY `idFacture` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idFacture` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `groupeacoustique`
 --
 ALTER TABLE `groupeacoustique`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT pour la table `meteo`
 --
 ALTER TABLE `meteo`
-  MODIFY `iDMeteo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+MODIFY `iDMeteo` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=110;
 --
 -- AUTO_INCREMENT pour la table `planning`
 --
 ALTER TABLE `planning`
-  MODIFY `idPlanning` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idPlanning` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `redevanceabris`
 --
 ALTER TABLE `redevanceabris`
-  MODIFY `categorie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+MODIFY `categorie` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `redevanceatterrissage`
 --
 ALTER TABLE `redevanceatterrissage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `service`
 --
 ALTER TABLE `service`
-  MODIFY `idService` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idService` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `idStaff` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+MODIFY `idStaff` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
