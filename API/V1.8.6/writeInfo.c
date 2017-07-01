@@ -248,7 +248,7 @@ int parseJSON(char *filteredInf){
     }
 	else
 		i = strlen(findtemp_max);
-	while(position[i] != ',')
+	while(position[i] != '}')
 	{
 		i++;
 		sizeofstring++;
@@ -373,7 +373,7 @@ int parseJSON(char *filteredInf){
     }
 	else
 		i = strlen(findsun_sunset);
-	while(position[i] != ',')
+	while(position[i] != '}')
 	{
 		i++;
 		sizeofstring++;
@@ -420,7 +420,7 @@ int parseJSON(char *filteredInf){
     MYSQL sql;
     mysql_init(&sql);
     mysql_options(&sql,MYSQL_READ_DEFAULT_GROUP,"option");
-    if(mysql_real_connect(&sql,"127.0.0.1","root","aenprojectx","aen",0,NULL,0))
+    /*if(mysql_real_connect(&sql,"127.0.0.1","root","aenprojectx","aen",0,NULL,0))
     {
     	  mysql_query(&sql, "SET NAMES 'utf8'");
           char marequete[600] = "";
@@ -428,6 +428,17 @@ int parseJSON(char *filteredInf){
           sprintf(marequete, "INSERT INTO meteo VALUES('','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')"
                   ,weather,description,temp_now,pressure,humidity,temp_min,temp_max,visibility,wind_speed,wind_degree,sun_sunrise,sun_sunset,dt);
           // On exécute la requête
+          mysql_query(&sql, marequete);
+          mysql_close(&sql);
+    }*/
+	if(mysql_real_connect(&sql,"127.0.0.1","root","aenprojectx","aen",0,NULL,0))
+    {
+    	  mysql_query(&sql, "SET NAMES 'utf8'");
+          char marequete[600] = "";
+          //On stock la requete dans notre tableau de char
+          sprintf(marequete, "UPDATE meteo SET  iDMeteo = '', weather = %s, description = %s, tempnow = %s, pressure = %s, humidity = %s, tempsmin = %s, tempsmax = %s, visibility = %s, windspeed = %s, winddegree = %s, sunrise = %s, sunset = %s, dt = %s"
+                  ,weather,description,temp_now,pressure,humidity,temp_min,temp_max,visibility,wind_speed,wind_degree,sun_sunrise,sun_sunset,dt);
+          //On execute la requete
           mysql_query(&sql, marequete);
           mysql_close(&sql);
     }

@@ -30,7 +30,7 @@
 							$donnees = $reponse->fetch();
 							echo "à partir de ".$donnees['ROUND(MIN(tarifjournalierbasesTTC),2)']." <em>€/JOUR</em>";
 						?></p>
-                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                        <a href="#" class="btn btn-primary">Réserver</a>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
 							$donnees = $reponse->fetch();
 							echo "à partir de ".$donnees['ROUND(MIN(TTC),2)']." <em>€/JOUR</em>";
 						?></p>
-                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                        <a href="#" class="btn btn-primary">Réserver</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     <div class="panel-body">
                         <h4>Nettoyage intérieur</h4>
                         <p>Adapté à vos besoins!</p>
-                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                        <a href="#" class="btn btn-primary">Réserver</a>
                     </div>
                 </div>
 			</div>
@@ -77,7 +77,7 @@
                     <div class="panel-body">
                         <h>Parachutisme</h4>
                         <p>Bientôt disponible.</p>
-                        <!-- <a href="#" class="btn btn-primary">En savoir plus</a> -->
+                        <!-- <a href="#" class="btn btn-primary">Réserver</a> -->
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                     <div class="panel-body">
                         <h4>Baptême de l'air</h4>
                         <p><em>Bientôt disponible</em></p>
-                        <!-- <a href="#" class="btn btn-primary">En savoir plus</a> -->
+                        <!-- <a href="#" class="btn btn-primary">Réserver</a> -->
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                     <div class="panel-body">
                         <h4>Leçon de pilotage</h4>
                         <p><em>Bientôt disponible</em></p>
-                        <!-- <a href="#" class="btn btn-primary">En savoir plus</a> -->
+                        <!-- <a href="#" class="btn btn-primary">Réserver</a> -->
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                     <div class="panel-body">
                         <h4>ULM</h4>
                         <p><em>Bientôt disponible</em></p>
-                        <!-- <a href="#" class="btn btn-primary">En savoir plus</a> -->
+                        <!-- <a href="#" class="btn btn-primary">Réserver</a> -->
                     </div>
                 </div>
             </div>

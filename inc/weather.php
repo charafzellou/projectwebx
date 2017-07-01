@@ -106,19 +106,20 @@ while ($donnees = $reponse->fetch())
 		</div>
 		<?php
 		}
-		$reponse->closeCursor(); // Termine le traitement de la requête?>
+			$reponse->closeCursor(); // Termine le traitement de la requête
+		?>
 	</div>
 	<div id="day1" class="tab-pane fade">   
-		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<p>Bientôt disponible!</p>
 	</div>
 	<div id="day2" class="tab-pane fade">
-		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+		<p>Bientôt disponible!</p>
 	</div>
 	<div id="day3" class="tab-pane fade">
-		<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		<p>Bientôt disponible!</p>
 	</div>
 	<div id="day4" class="tab-pane fade">
-		<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		<p>Bientôt disponible!</p>
 	</div>
 </div>
 </div>

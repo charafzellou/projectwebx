@@ -2,12 +2,16 @@
 @import url('https://fonts.googleapis.com/css?family=Leckerli+One');
 
 /*boot*/
+.row{
+	text-align : center;
+}
+
 .container {
 	padding-right: 10px;
 	padding-left: 10px;
 	margin-right: auto;
 	margin-left: auto;
-	background: url('../img/background.jpg') top center no-repeat fixed;
+	background: url('../img/background.jpg') top ;
 	font: 16px/18px sans-serif;	
 	color: #ffffff;
 	-webkit-background-size: cover;
@@ -41,7 +45,10 @@ header
 	color: #1b1b5c;
 	font-size: 15px;
 }
-
+body
+{
+	background-color: white;
+}
 
 
 .menu {
@@ -99,15 +106,16 @@ header
 	width: 100%;
 	
 }
-/*weather*/
+
 .weather
 {
+	width: 60%;
 	color: white;
 }
 .weathericone
 {
 	color: #1b1b5c;
-	font-size: 50px;
+	font-size: 38px;
 }
 .description
 {
@@ -150,11 +158,12 @@ header
 }
 .centermet
 {
-	width: 46%;
+	margin-left: 10px;
+	width: 44%;
 }
 .rightmet
 {
-	width: 40%;
+	width: 38%;
 }
 .meteolist
 {

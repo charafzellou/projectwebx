@@ -14,5 +14,5 @@ try
 		$login,
 		$password);
 }
-catch(Exception $e){die('Erreur L33: '.$e->getMessage());}
+catch(Exception $e){die('Erreur L11: '.$e->getMessage());}
 ?>

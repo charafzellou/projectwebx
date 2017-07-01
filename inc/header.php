@@ -4,12 +4,12 @@
     </div>
     
     <div id="menu-header-top">
-        <div href="#" class="col-lg-8 weather" >
+        <div class="col-lg-8 weather" >
 			<?php
                 require_once('inc/weather.php');
             ?>
         </div>
-        <div href="#" id="conn" class="dd menu-item menu-item-type-post_type menu-item-object-page col-lg-2">Mon compte
+        <div id="conn" class="dd menu-item menu-item-type-post_type menu-item-object-page col-lg-2">Mon compte
         	<ul class="dd-content">
                 <li><a  href="login.php">Se connecter</a></li>
 				<li><a  href="register.php">Créer un compte</a></li>
