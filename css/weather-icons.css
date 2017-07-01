@@ -19,6 +19,7 @@
  *  - Inspired by and works great as a companion with Font Awesome
  *    "Font Awesome by Dave Gandy - http://fontawesome.io"
  */
+ 
 @font-face {
   font-family: 'weathericons';
   src: url('../font/weathericons-regular-webfont.eot');
@@ -70,10 +71,10 @@
   transform: scale(1, -1);
 }
 .wi-day-sunny:before {
-  content: "\f00d";
+	content: "\f00d";
 }
 .wi-day-cloudy:before {
-  content: "\f002";
+	content: "\f002";
 }
 .wi-day-cloudy-gusts:before {
   content: "\f000";

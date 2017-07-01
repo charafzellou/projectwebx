@@ -3,74 +3,35 @@
 #include <string.h>
 #include "parseJSON.h"
 
-int parseJSON(){
-	printf("\nparseJSON\n");
-
-    // Ouverture du fichier WEATHERJSON
-    FILE* WeatherJSON = fopen("weather.json", "r");
-	if(WeatherJSON == NULL)
-    {
-        fprintf(stderr,"\nERROR, cannot open the weather file");
-        return -1;
-    }
-
+int parseJSON(char *filteredInf){
+	printf("\nparseJSON");
+	printf("\n\ntexte%s",filteredInf);
+	printf("\nl9");
     // Initilisation des variables liées à la météo
+	int i = 0;
+	char *findweather = "\"weather\":[{%\"id\":";
+	int sizeofstring = 0;
+	char *position = NULL;
     char* weather = NULL, description = NULL, temp_now = NULL, pressure = NULL, humidity = NULL,
         temp_min = NULL, temp_max = NULL, visibility = NULL, wind_speed = NULL, wind_degree = NULL,
         sun_sunrise = NULL, sun_sunset = NULL;
-
-    // Allocation du fichier dans une variable
-    fseek( WeatherJSON , 0L , SEEK_END);
-    long lSize = ftell( WeatherJSON );
-    rewind( WeatherJSON );
-
-    char* charJSON = (char*) malloc(sizeof(char)*lSize);
-        if( charJSON == NULL ){
-            fclose(WeatherJSON);
-            fputs("Memory alloc for CHARJSON fails!", stderr);
-            return -1;
-        }
-
-    // Stockage et vérification
-    size_t result = fread( charJSON, 1, lSize, WeatherJSON);
-        if( result == NULL ){
-            fclose(WeatherJSON);
-            free(charJSON);
-            fputs("Entire read of WeatherJSON fails", stderr);
-            return -1;
-        }
-        if (result != lSize) {
-            fputs("Reading error in result",stderr);
-            return -1;
-        }
-
-    // Fermeture du flux-fichier
-    fclose(WeatherJSON);
-
-    char* pos_actuelle = "";
-    char char_actuel = "";
-
-    //
-    pos_actuelle = strstr(charJSON, "\"weather\":[{\"id\":");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Passage à la partie SQL
+	
+	position = strstr(filteredInf, findweather);
+	if( position == NULL )
+    {
+        fprintf(stderr,"\nERROR, can't find the string");
+        return -1;
+    }
+	else
+		i = strlen("\"weather\":[{%\"id\":");
+	while(position[i] != ',')
+	{
+		i++;
+		sizeofstring++;
+	}
+	
+	printf("%d,%d",strlen("\"weather\":[{%\"id\":"),sizeofstring);
+	// Passage à la partie SQL
     /*
     MYSQL sql;
     mysql_init(&sql);

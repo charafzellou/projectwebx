@@ -5,10 +5,9 @@
     
     <div id="menu-header-top">
         <div href="#" class="col-lg-8 weather" >
-        <!--style ="background: red;"-->	
-            <?php
-				require_once('inc/weather.php');
-			?>
+			<?php
+                require_once('inc/weather.php');
+            ?>
         </div>
         <div href="#" id="conn" class="dd menu-item menu-item-type-post_type menu-item-object-page col-lg-2">Mon compte
         	<ul class="dd-content">
@@ -31,7 +30,7 @@
             <a href="tarifs.php">Tarifs</a>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page last col-lg-3">
-            <a href="apropos.php">à propos</a>
+            <a href="apropos.php">À propos</a>
         </li>
     </ul>
 </nav>

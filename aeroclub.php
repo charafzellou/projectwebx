@@ -12,7 +12,7 @@
 			<?php
 				require_once('inc/header.php');
 			?>
-		</header>
+		</header>	
 		
 		<div class="content">
 		<div class="post">

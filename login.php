@@ -34,7 +34,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="mail" id="mail"  placeholder="Adresse mail utilisée lors de l'inscription"/>
+                                    <input type="text" class="form-control" name="mail" id="mail"  placeholder="Adresse mail"/>
                                 </div>
                             </div>
                         </div>

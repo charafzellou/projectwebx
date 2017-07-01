@@ -2,6 +2,7 @@
 <html lang="fr-FR">
 	<head>
 		<?php
+			require_once('inc/connection.php');
 			require_once('inc/head.php');
 		?>
 	</head>
@@ -24,7 +25,11 @@
                     </div>
                     <div class="panel-body">
                         <h4>Stationnement</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p><?php
+							$reponse = $bdd->query("SELECT ROUND(MIN(tarifjournalierbasesTTC),2) FROM redevanceabris");
+							$donnees = $reponse->fetch();
+							echo "à partir de ".$donnees['ROUND(MIN(tarifjournalierbasesTTC),2)']." <em>€/JOUR</em>";
+						?></p>
                         <a href="#" class="btn btn-primary">En savoir plus</a>
                     </div>
                 </div>
@@ -36,8 +41,12 @@
 						<img src="img/pump.png" style="width: 100%;">
                     </div>
                     <div class="panel-body">
-                        <h4>Avitaillement</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <h4>Ravitaillement</h4>
+                        <p><?php
+							$reponse = $bdd->query("SELECT ROUND(MIN(TTC),2) FROM redevanceatterrissage");
+							$donnees = $reponse->fetch();
+							echo "à partir de ".$donnees['ROUND(MIN(TTC),2)']." <em>€/JOUR</em>";
+						?></p>
                         <a href="#" class="btn btn-primary">En savoir plus</a>
                     </div>
                 </div>
@@ -50,7 +59,7 @@
                     </div>
                     <div class="panel-body">
                         <h4>Nettoyage intérieur</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>Adapté à vos besoins!</p>
                         <a href="#" class="btn btn-primary">En savoir plus</a>
                     </div>
                 </div>
@@ -66,9 +75,9 @@
 						<img src="img/skydiving.png" style="width: 100%;">
                     </div>
                     <div class="panel-body">
-                        <h4>Parachutisme</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                        <h>Parachutisme</h4>
+                        <p>Bientôt disponible.</p>
+                        <!-- <a href="#" class="btn btn-primary">En savoir plus</a> -->
                     </div>
                 </div>
             </div>
@@ -80,8 +89,8 @@
                     </div>
                     <div class="panel-body">
                         <h4>Baptême de l'air</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                        <p><em>Bientôt disponible</em></p>
+                        <!-- <a href="#" class="btn btn-primary">En savoir plus</a> -->
                     </div>
                 </div>
             </div>
@@ -93,8 +102,8 @@
                     </div>
                     <div class="panel-body">
                         <h4>Leçon de pilotage</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                        <p><em>Bientôt disponible</em></p>
+                        <!-- <a href="#" class="btn btn-primary">En savoir plus</a> -->
                     </div>
                 </div>
             </div>
@@ -106,8 +115,8 @@
                     </div>
                     <div class="panel-body">
                         <h4>ULM</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                        <p><em>Bientôt disponible</em></p>
+                        <!-- <a href="#" class="btn btn-primary">En savoir plus</a> -->
                     </div>
                 </div>
             </div>

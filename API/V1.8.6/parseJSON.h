@@ -28,4 +28,4 @@
 #endif
 #include <time.h>
 
-int parseJSON();
+int parseJSON(char *filteredInf);

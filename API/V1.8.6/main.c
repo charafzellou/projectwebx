@@ -8,17 +8,17 @@
 int main(void)
 {
 
-    /*char buffer[BUFFER_SIZE];
+    char buffer[BUFFER_SIZE];
     memset(buffer, '\0', BUFFER_SIZE);
 
     if(readInfo(buffer) == -1)
         return EXIT_FAILURE;
 
     if(writeInfo(buffer) == -1)
-        return EXIT_FAILURE;*/
-
-    if(parseJSON() == -1)
         return EXIT_FAILURE;
+    
+    /*if(parseJSON() == -1)
+        return EXIT_FAILURE;*/
 
     return EXIT_SUCCESS;
 }
